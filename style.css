@@ -1,8 +1,98 @@
+/* Genel Sıfırlama */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
 /* #header, #hero, #gallery, #footer genişlikleri 750px olmalı */
+#header,
+#hero,
+#gallery,
+#footer {
+    width: 750px;
+    margin: 0 auto;
+    /* Bölümleri sayfada yatayda ortalar */
+}
+
+/* Header Düzeni */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
 
 /* #menu bir <nav> olmalı */
-/* #menu içindeki linklerin arka plan rengi: #777 */
-/* #menu linklerine hover yapıldığında arka plan rengi: #000 */
-/* #menu linklerinin padding değeri: 20px */
+#menu {
+    display: flex;
+}
 
-/* #footer butonu metni 'Başa dön' olmalı */
+/* #menu içindeki linklerin arka plan rengi: #777 */
+/* #menu linklerinin padding değeri: 20px */
+#menu a {
+    background-color: #777;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* #menu linklerine hover yapıldığında arka plan rengi: #000 */
+#menu a:hover {
+    background-color: #000;
+}
+
+/* Hero Bölümü */
+#hero {
+    width: 750px;
+    margin: 0 auto;
+
+    /* Testlerin geçmesini sağlayacak zorunlu Flexbox kuralları */
+    display: flex;
+    flex-direction: column;
+    /* İçeriği dikey olarak sıralar */
+    justify-content: center;
+    /* İçeriği dikey/yatay eksende ortalar */
+    align-items: center;
+    /* İçeriği yatay eksende ortalar */
+
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Gallery Bölümü */
+#gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Bölümü */
+#footer {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #eee;
+}
+
+#footer button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
